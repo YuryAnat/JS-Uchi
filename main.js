@@ -22,6 +22,8 @@ console.log('2k' / 2);
 
 console.log(99999999999999999n + 1n);
 
+// task 2
+
 let fistStr = 'one';
 let str2 = "two";
 let str3 = `three ${fistStr}`
@@ -39,4 +41,33 @@ console.log(typeof str2);
 console.log(typeof i);
 console.log(typeof null);
 
-document.getElementById("indexDiv").innerHTML = "Выведено с JS";
+document.getElementById("indexText").innerText = "Выведено с JS";
+
+// task 3
+
+document.getElementById("indexInner").innerHTML = '<p>Выведено p JS<\p>';
+document.getElementById("indexText").innerText = "Выведено с JS";
+
+document.querySelector('#indexInner').innerHTML = '';
+document.querySelector('.p1').innerHTML = '9999999999999999999999999999';
+
+console.log(document.querySelectorAll('.p1'));
+
+let input = document.querySelector('.text');
+let button = document.querySelector('.click');
+let divIn = document.querySelector('.divInput');
+button.onclick = function() {
+    console.log(input.value);
+    console.log(typeof input.value);
+    divIn.innerHTML = `<h1>${input.value}</h1>`;
+    input.value = '';
+}
+
+let pval = prompt('Who?');
+if(pval != '') {
+    input.value = pval
+} else {
+    input.value = 'nobody'
+}
+
+
