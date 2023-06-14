@@ -38,3 +38,5 @@ console.log(str2 == str3);
 console.log(typeof str2);
 console.log(typeof i);
 console.log(typeof null);
+
+document.getElementById("indexDiv").innerHTML = "Выведено с JS";
